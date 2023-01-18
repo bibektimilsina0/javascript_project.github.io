@@ -1,0 +1,521 @@
+*{
+padding: 0;
+margin: 0;
+font-family:sans-serif;
+box-sizing: border-box;
+
+}
+div.top{
+height:100vh;
+width:100%;
+color:white;
+display: grid;
+}
+.navbar{
+    opacity: 1;
+    top: 0;
+    overflow: hidden;
+    position: fixed;
+    display: flex;
+    width:100%;
+    justify-content: space-around;
+    align-items: center;
+  background-color:navy;
+  height: 10%;
+
+ }
+.logo{
+    color:white;
+}
+.logo span{
+    color: crimson;
+}
+.btn{
+    background-color:#f9004d;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition:transform 1s;
+
+}
+.btn:hover{
+    transform: scale(1.1);
+}  
+.menu{
+    display: flex;
+  align-items: center;
+    justify-content: space-around;
+}
+.menu li{
+   list-style: none;
+    margin-left: 25px;
+    padding: 10px 25px;
+}
+.menu li a{
+    color:white;
+    text-decoration: none;
+}
+.menu li a:hover{
+color:red;
+transition: .4s;
+}
+section#bck{
+   background-image:url(tree.jpg);
+    height:100%;
+    width:100%;
+    background-position: center;
+    background-size:cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    text-align: center;
+}
+.content .text1{
+    margin-top: 40px;
+    font-size: 27px;
+}
+.content .text2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+
+}
+.content .text3{
+    font-size: 40px;
+    margin: 5px 0px;
+}
+.content .text3 span{
+    color:crimson;
+    font-weight: 500;
+}
+.top .content a{
+    background:crimson;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    color:white;
+    margin-top:20px;
+    border-radius: 12px;
+    font-weight:bold;
+    transition:all 0.3s ease;
+}
+.top .content a:hover{
+    color:crimson;
+   background:none;
+}
+/*about section*/
+section.about, .skills, .contactus, .services{
+    padding: 20px 20px;
+    height:100vh;
+}
+.about .knowme h3.title{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-top:40px;
+    padding-top:40px;
+    margin-bottom:12px;
+    padding-bottom:12px;
+
+}
+section.about .knowme .flex {
+    display: flex;
+  
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.about .knowme .flex .left{
+    width:45%;
+    margin-left:50px;
+    margin-right:50px;
+}
+section.about .knowme .flex .left img{
+    max-width: 50%;
+   height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.about .knowme .right{
+    width: 55%;
+    margin-left:50px;
+    margin-right:50px;
+}
+.about .knowme .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom:20px;
+}
+.about .knowme .right .text span{
+    color:crimson;
+}
+.about .knowme .right p{
+    text-align:justify;
+    padding-bottom:6px;
+}
+
+.about .knowme .right a{
+    background:crimson;
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 36px;
+    color:white;
+    margin-top:20px;
+    border-radius: 12px;
+    font-weight:bold;
+    transition:all 0.3s ease;
+}
+.about .knowme .right a:hover{
+    color:crimson;
+    background: none;
+}
+/* services*/
+.services{
+    color: black;
+    background:white;
+    height:100vh;
+
+}
+.services .whatiprovide .title{
+    margin-top:40px;
+    padding-top:40px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom:40px;
+
+}
+.services .whatiprovide .flex{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.services .whatiprovide .flex .card .box .text{
+    font-size:25px;
+    padding-bottom: 6px;
+    text-align: center;
+}
+.services .whatiprovide .flex .card .box p{
+    font-size:18px;
+    padding: 12px;
+  text-align: center;
+  text-align:justify;
+}
+.services .whatiprovide .flex .card .box{
+    transition:all 0.3s ease;
+    padding-bottom: 12px;
+    padding-top: 12px; 
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+.services .whatiprovide .flex .card .box i{
+    color: red;
+    font-size: 40px;
+    margin-left: 130px;
+    margin-right: 130px;
+}
+.fa-solid:hover{
+color:white;
+}
+.services .whatiprovide .flex .card {
+    margin:3%;
+    width:35%;
+    height:40%;
+    color:white;
+    margin-top:20px;
+    border-radius: 6px;
+    background:blueviolet;
+    transition:all 0.3s ease;
+}
+.services .whatiprovide .flex .card:hover .box{
+
+ transform:scale(1.05);
+}
+.services .whatiprovide .flex .card .box:hover{
+    color:white;
+    background: crimson;
+    border-radius: 6px;
+
+}
+/* my skills and contact*/
+.services, .skills, .contactus, .about{
+    background-color: #f2f2f2;
+}
+.skills .whatiknow ,
+.contactus .callme 
+{
+    height:90%;
+    align-items: center;
+}
+
+.skills .whatiknow .title,
+.contactus .callme .title
+{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom:12px;
+   padding-bottom:12px;
+    margin-top:40px;
+    padding-top:40px;
+
+}
+.skills .whatiknow .flex,
+.contactus .callme .flex
+{
+    display: flex;
+    
+    align-items: center;
+    word-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skills .whatiknow .flex .left,
+.contactus .callme .flex .left
+{
+    width:50%;
+    margin: 20px;
+    padding: 20px;
+}
+.skills .whatiknow .flex .left .text{
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom:20px;
+}
+.skills .whatiknow .flex .left p{
+    text-align:justify;
+    padding-bottom:6px;
+}
+.skills .whatiknow .flex .left a{
+    background:crimson;
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 36px;
+    color:white;
+    margin-top:20px;
+    border-radius: 12px;
+    font-weight:bold;
+    transition:all 0.3s ease;
+}
+
+.skills .whatiknow .flex .left a:hover{
+    color:crimson;
+    background: none;
+
+}
+.skills .whatiknow .flex .right{
+    width:50%;
+    margin: 12px 60px 12px 12px;
+}
+.skills .whatiknow .flex .right .bars{
+    margin-bottom: 20px;
+    
+    
+}
+.skills .whatiknow .flex .right .bars .info{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+}
+.skills .whatiknow .flex .right .bars .info span{
+    font-size: 18px;
+    font-weight: 400;
+}
+.skills .whatiknow .flex .right .bars .line { 
+    height: 5px;
+    width:100%;
+    background:lightgray;
+    position:relative;
+
+}
+.skills .whatiknow .flex .right .bars .line::before{
+    content:"";
+height: 100%;
+position: absolute;
+top:o;
+left: 0;
+background:crimson;
+}
+.skills .whatiknow .flex .right .bars .html::before{
+ width:90%;
+ background:crimson;
+}
+
+.skills .whatiknow .flex .right .bars .html::before{
+    width:90%;
+    background:crimson;
+}
+.skills .whatiknow .flex .right .bars .css::before{
+    width:50%;
+    background:crimson;
+}
+.skills .whatiknow .flex .right .bars .js::before{
+    width:80%;
+    background:crimson;
+}
+.skills .whatiknow .flex .right .bars .c::before{
+    width:100%;
+    background:crimson;
+}
+.skills .whatiknow .flex .right .bars .cpp::before{
+    width:90%;
+    background:crimson;
+}
+
+/*cotact */
+.contactus .callme .flex .column{
+    width:50%;
+}
+.contactus .callme .flex .left .text{
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 6px;
+}
+.contactus .callme .flex .left p{
+    text-align: justify;
+
+}
+.contactus .callme .flex .left .icons{
+    margin: 10px 0px;
+}
+/*.contactus .callme .flex .left .info{
+ display: flex;
+ height:65px;
+ align-items: center;
+}
+*/
+.contactus .callme .flex .left .info{
+    margin-left: 30px;
+    padding-bottom: 12px;
+    display: flex;
+   align-items: center;
+
+}
+.contactus .callme .flex .left .info i{
+    color: red;
+    font-size: 20px;
+    margin-right: 10px;
+
+}
+
+.contactus .callme .flex .left .icons .info .head{
+    font-weight: 550;
+    font-size: 20px;
+}
+.contactus .callme .flex .left .icons .info .sub-title{
+color: #333;
+}
+.contactus .callme .flex .right{
+    margin-left: 15px;
+    margin-right:40px;
+    background-color: #f2f2f2;
+    padding: 12px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+}
+.contactus .callme .flex .right .text{
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+
+.contactus .callme .flex .right form .fields{
+ display: flex;
+ 
+}
+.contactus .callme .flex .right form .fields .field input,
+.contactus .callme .flex .right form .fields input,
+.contactus .callme .flex .right form .sub input
+{
+ width: 100%;
+ height:40px;
+}
+.contactus .callme .flex .right form .fields{
+    height:68px;
+}
+
+.contactus .callme .flex .right form .field input,
+.contactus .callme .flex .right form .field textarea {
+height:"100%";
+width:"100";
+border: 1px solid lightgray;
+border-radius: 6px;
+font-size: 17px;
+outline: none;
+padding: 0 15px;
+}
+.contactus .callme .flex .right form .field .message textarea{
+height: 100%;
+width:100%;
+}
+.contactus .callme .flex .right form .email{
+    margin-left:10px;
+}
+.contactus .callme .flex .right form .name
+{
+    margin-right:10px;
+}
+
+.contactus .callme .flex .right form .field textarea{
+    margin-top: 20px;
+    height:100px;
+    width:100%;
+
+}
+.contactus .callme .flex .right form .button{
+    height:50px;
+    width:170px;
+    margin:15px;
+}
+.contactus .callme .flex .right form .button button{
+    height: 100%;
+    width:100%;
+    border: 1px solid crimson;
+    background-color: crimson;
+    color:white;
+    font-size: 20px;
+    font-weight:600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+
+}.contactus .callme .flex .right form .button button:hover{
+    color:crimson;
+    background: none;
+    border: none;
+}
+footer{
+    background-color: blue;
+    height:10%;
+    width: 100%;
+    align-items: center;
+    margin:-25px;
+}
+#copyright{
+    color:white;
+   display: block;
+   text-align: center;
+}
+#copyright a{
+    color:crimson;
+    text-decoration: none;
+
+}
+a{
+    color: red;
+}
