@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>studyjavascript</title>
+    <style>
+        div{
+            text-align: center;
+        }
+        .main , .main2, .main3{
+            background-color: blue;
+            color: white;
+            font-size: 40px;
+            padding: 200px;
+            
+        }
+        input.effect{
+            background-color: white;
+            color: blue;
+            height: 30px;
+            border: brown;
+            border-radius: 5px;
+        }
+        #display, #result{
+            color: gray;
+            font-size: 20px;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div>
+            <p id="date"></p>
+            <p>A function is triggered when user is pressing a key in the input field.</p>
+            <br>
+            <input type="text" onkeypress="keyPress()" class="effect">
+            <br>
+            <p id="display"></p>
+        </div>
+    </div>
+    <div class="main2">
+      <div>
+            <lebel  for="">Your name </lebel>
+            <input type=" text" class="effect" id="ice">
+            <br>
+            <lebel> Choose ice cream flavor</lebel>
+            <select name="icecream" id="icecream">
+                <option value="chocolate">chocolate</option>
+                <option value="vanilla">vanilla</option>
+                <option value="strawberry">strawberry</option>
+            </select>
+            <p id="result"></p>
+     </div>    
+    </div>
+    <div class="main3">
+        <div>
+              <p id="count">count</p>
+             <button id="btn1">start</button>
+             <button id="btn2">stop</button>
+       </div>    
+      </div>
+    <script>
+        (function(){
+            setInterval(() => {
+                let showdate=document.getElementById("date");
+                showdate.innerHTML=new Date().toLocaleTimeString();
+            }, 1000)
+        })();
+
+        const keyPress=()=>{
+            document.getElementById("display").innerHTML=`you press ${event.key} with value ${event.code}`;
+        }
+        const icecream=document.getElementById("icecream");
+        icecream.addEventListener('change',()=>{
+            const inputname=document.getElementById("ice").value;
+            const selecting=document.getElementById("icecream").value;
+            const result=document.getElementById('result');
+            result.innerHTML=`Mr ${inputname} select ${selecting} ice-cream flavor.`;
+        })
+        
+        const show=document.getElementById("count");
+        const startcount=document.getElementById("btn1");
+        const stopcount=document.getElementById("btn2");
+        let timeset;
+        let num=0;
+        startcount.addEventListener("click", ()=>{
+            show.innerHTML="loading...";
+            timeset=setInterval(()=>{
+                show.innerHTML=`${num}`;
+                num++;
+            },1000);
+
+        })
+        stopcount.addEventListener("click",()=>{
+            clearInterval(timeset);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+body{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #96b8df;
+    height: 100vh;
+   
+}
+
+.container{
+    height: 500px;
+    width: 400px;
+    border-radius: 10px;
+    border: 1px solid blue;
+    background-color: #f2f2f2;
+    overflow:scroll;
+    
+}
+.form {
+    text-align: center;
+    padding: 10px 0px;
+    width: 100%;
+    border: none;
+}
+ #input{
+     font-size: 16px;
+    text-align: center;
+    padding: 5px 0px;
+    border-radius: 8px;
+    width: 90%;
+    border: 1px solid black;
+ }
+ img{
+     width: 40px;
+     height: 40px;
+     border-radius: 3px;
+ }
+ .product{
+     display: flex;
+     flex-direction: row;
+     padding: 5px 15px;
+     align-items: center;
+ }
+ .pdc{
+     padding: 0px 14px;
+ }
+ .text{
+     font-size: 20px;
+ }
+ .price{
+    font-size: 14px;
+}

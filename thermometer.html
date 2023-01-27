@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thermometer</title>
+    <style>
+        body{
+            color:white;
+            background-color: blue;
+        }
+        .main{
+            height:max-content;
+            margin: 0px;
+            display: flex;
+           justify-content: center;
+           align-items: center;
+        }
+        h1{
+            font-size: 60px;
+
+        }
+        span{
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>I am <br> Thermometer <span id="temp"></span></h1>
+    </div>
+    <script>
+        const tempload= ()=>{
+           let temp= document.getElementById('temp');
+           temp.innerHTML= "\xf2cb";
+           temp.innerHTML= "\u2708";
+           temp.style.color="red";
+        }
+    
+        tempload();
+    </script>
+</body>
+
+</html>

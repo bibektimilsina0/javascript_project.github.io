@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <style>
+        div{
+            height: 100vh;
+            display:grid;
+            place-items: center;
+            align-items: center;
+            background-color: blue;
+        }
+        form{
+            background-color:pink;
+            color:white;
+            height:300px;
+            width: 400px;
+            border: none;
+            border-radius: 8px;
+            display:grid;
+            place-items: center;
+            align-items: center;
+            font-size: 20px;
+        }
+      
+        .temp{
+            color:blue;
+            font-size: medium;
+            height :25px;
+        }
+        select{
+            height:25px;
+            color: blue;
+        }
+        button{
+            height:25px;
+            width:80px;
+            color: blue;
+            background-color: yellow;
+            border-radius: 4px;
+            border: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+    <form class="tempcalc" onsubmit="tempcalc();return false">
+        <label for="temperature">Enter the temperature you'd like to convert.</label>
+        <input type="number" class="temp" id="temp">
+        <select name="type" id="type">
+            <option >---select---</option>
+            <option value="celc">°Celsius</option>
+            <option value="fren">°Fahrenheit</option>
+            
+        </select>
+        <!-- <input type="button" name="temp" id="button" value="Submit"> -->
+        <button type="submit">Submit</button>
+        <br/>
+        <span id="result"></span>
+    </form>
+    </div>
+</body>
+<script>
+    const tempcalc=()=>{
+        const tempnum=document.getElementById("temp").value;
+        const tempselected=document.getElementById("type");
+        // const tempvalue=tempselected.selectedIndex;
+        // const x=tempselected.options;
+
+        const tempvalue=type.options[tempselected.selectedIndex].value;
+        const result=document.getElementById("result");
+        var finalvalue;
+        
+        const celTofah=(c)=>{
+            let f;
+            f=((9/5)*c+32);
+            return f;
+        }
+        const fahTocel=(f)=>{
+            let c;
+            c=((5/9)*(f-32));
+            return c;
+        }
+        if(tempvalue=="celc"){
+            finalvalue=celTofah(tempnum);
+            result.innerHTML=`= ${finalvalue}°Fahrenheit`;
+        } else if(tempvalue=="fren"){
+            finalvalue=fahTocel(tempnum);
+            result.innerHTML=`= ${finalvalue}°Celsius`;
+        }else{
+            console.log(" no index selected");
+        }
+
+
+    }
+  
+</script>
+</html>

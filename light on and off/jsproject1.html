@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turn on light </title>
+    <style>
+        .main{
+            background-color: white;
+            color:black;
+            
+            text-align: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        button#on ,button#off{
+            border: none;
+            border-radius: 6px;
+            height: 30px;
+            background-color: yellow;
+            color: blue;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="body">
+            <h2 id="title">Can you turn the light on?</h2>
+            <button id="on" onclick="lighton()">Trun ON Light</button>
+            <img src="off.gif" alt="OFF" id="img">
+            <button id="off" onclick="lightoff()">Turn OFF Light</button>
+        </div>
+    </div>
+    <script>
+       function lighton(){
+            document.getElementById("img").src=("on.gif");
+        }
+        function lightoff(){
+            document.getElementById("img").src=("off.gif");
+        }
+    </script>
+</body>
+</html>

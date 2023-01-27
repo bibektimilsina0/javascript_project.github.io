@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Zen+Dots&display=swap" rel="stylesheet">     
+    <style>
+    
+    
+        body{
+            background-color: blue;
+
+        }
+        div#body{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div#container{
+            width:500px;
+            height: 300px;
+            background-color: white;
+            color:black;
+            margin: 100px -50px 100px -50px;
+            border-radius: 9px;
+            text-align: center;
+        }
+        h3{ padding-top: 15px;
+             font-size: 30px;
+            font-family: 'Dancing Script', cursive;                                   
+            font-size: medium;
+
+        }
+        p.jokes{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 150px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 25px;
+        }
+        button{
+            position: relative;
+            background-color:green;
+            color: white;
+            height: 35px;
+            width: 100px;
+            border:none;
+            border-radius: 5px;
+            opacity: 1;
+            transition: 0.3s;
+            font-family: 'Zen Dots', cursive;
+        }
+        button:hover{
+            opacity: 0.8;
+            transition-duration: 0.1s;
+        }
+        button:after {
+        content: "";
+        display: block;
+        position: absolute;
+        border-radius: 4em;
+        left: 0;
+        top:0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: all 0.5s;
+        box-shadow: 0 0 8px 30px black;
+        }
+
+        button:active:after {
+        box-shadow: 0 0 0 0 white;
+        position: absolute;
+        border-radius: 4em;
+        left: 0;
+        top:0;
+        opacity: 1;
+        transition: 0s;
+        }
+
+        button:active {
+        top: 1px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="body">
+        <div id="container">
+            <h3 class="header">Best Jokes To Make Your Day</h3>
+            <p class="jokes" id="jokes">Loading......</p>
+            <button id="jokesbtn">NEXT JOKE</button>
+        </div>
+    </div>
+</body>
+<script>
+    // const jokes=document.getElementById('jokes');
+    // const button=document.getElementById("jokesbtn");
+
+    // const generatejokes=()=>{
+    //     const setheader={
+    //         headers :{
+    //             Accept:"application/json"
+    //         }
+    //     }
+
+    //     fetch("https://icanhazdadjoke.com/", setheader)
+
+    //     .then((res)=> res.json())
+    //     .then((data)=>{
+    //         jokes.innerHTML=data.joke;
+    //     })
+    // }
+
+    // button.addEventListener("click" ,generatejokes);
+    // generatejokes();
+    const jokes=document.getElementById('jokes');
+    const button=document.getElementById("jokesbtn");
+
+    const generatejokes=async()=>{
+        try{
+        const setheader={
+            headers :{
+                Accept:"application/json"
+            }
+        }
+
+       const res=await fetch("https://icanhazdadjoke.com/", setheader);
+       const data=await res.json();
+       jokes.innerHTML=data.joke;
+    }catch(err){
+            console.log=`error is ${err}`;
+        }
+
+     }
+    button.addEventListener("click" ,generatejokes);
+    generatejokes();
+</script>
+</html>
